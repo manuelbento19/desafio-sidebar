@@ -1,0 +1,125 @@
+:root {
+    --body-bg-color: #dce4e3;
+    --green: #18c29c;
+    --light-green: #8ed7c6;
+    --light-grey: #dce4e3;
+    --text-color: #084236;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+}
+.container{
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+}
+.container aside{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--green);
+}
+.container aside header{
+    display: flex;
+    justify-content: space-between;
+    padding: 22px;
+}
+.container aside section{
+    width: 100%;
+    display: flex;
+    padding: 14px;
+    height: 100%;
+}
+.container aside section ul{
+    list-style: none;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    gap: 6px;
+}
+.active{
+    background: var(--light-green);
+}
+.container aside section ul li{
+    overflow: hidden;
+    border-radius: 10px;
+}
+.container aside section ul li:hover{
+    transition: all ease-in-out .2s;
+    background: var(--light-green);
+}
+.container aside section ul li a{
+    padding: 12px 6px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.container aside footer{
+    width: 100%;
+    padding: 6px;
+    display: flex;
+    margin: auto;
+    background-color: var(--light-green);
+}
+.container aside footer figure{
+    margin: auto;
+}
+.container aside footer figure img{
+    max-width:50px;
+    width: 100%;
+    border-radius: 6px;
+}
+.container aside footer section{
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    gap: 42px;
+}
+.container aside footer section .info{
+    display: flex;
+    flex-direction: column;
+}
+.container aside footer section .info strong{
+    font-size: 12px;
+}
+.container aside footer section .info span{
+    font-size: 12px;
+}
+.container aside footer section .option{
+    margin: auto;
+    flex: 1;
+}
+.container aside footer section .option button{
+    border: none;
+    background-color: transparent;
+}
+.container aside footer section .option button:hover{
+    cursor: pointer;
+}
+.container main{
+    flex: 3;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+@media(max-width: 310px){
+    .container aside{
+        width: 75px;
+    }
+    .container aside #logo{
+        display: none;
+    }
+    .container aside footer section .info, figure{
+        display: none;
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Sidebar</title>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <header>
+                <img src="./assets/logo.svg" alt="" id="logo">
+                <img src="./assets/menu.svg" alt="" id="menu">
+            </header>
+            <section>
+                <ul>
+                    <li class="active">
+                        <a href="#">
+                            <img src="./assets/search.svg" alt="">
+                            <span>Buscar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/grid.svg" alt="">
+                            <span>Dasboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/pet.svg" alt="">
+                            <span>Pets</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/user.svg" alt="">
+                            <span>Clientes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/vet.svg" alt="">
+                            <span>Vets</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/settings.svg" alt="">
+                            <span>Ajustes</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <footer>
+                <figure>
+                    <img src="./assets/photo.jpg" alt="">
+                </figure>
+                <section>
+                    <div class="info">
+                        <strong>Eleonor Doe</strong>
+                        <span>Funcionária</span>
+                    </div>
+                    <div class="option">
+                        <button><img src="./assets/log-out.svg" alt=""></button>
+                    </div>
+                </section>
+            </footer>
+        </aside>
+        <main>
+            <header>Dasboard</header>
+        </main>
+    </div>
+    <script>
+        var menu = document.querySelector('#menu')
+        menu.addEventListener('click',()=>{
+            var sidebar = document.querySelector('aside');
+            if(sidebar.style.width!=="76px"){
+                sidebar.style.width ='76px';
+                ['#logo','section .info','figure'].map(item=>document.querySelector(item).style.display = "none")
+            }
+            else {
+                sidebar.style.width ='initial';
+                ['#logo','section .info','figure'].map(item=>document.querySelector(item).style.display = "flex")
+            }        
+        })
+    </script>
+</body>
+</html>
